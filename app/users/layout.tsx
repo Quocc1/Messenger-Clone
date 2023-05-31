@@ -3,9 +3,9 @@ import Sidebar from '../components/sidebar/Sidebar';
 import UserList from './components/UserList';
 
 export default async function UserLayout({
-  childern,
+  children,
 }: {
-  childern: React.ReactNode;
+  children: React.ReactNode;
 }) {
   const users = await getUsers();
   return (
@@ -13,7 +13,7 @@ export default async function UserLayout({
     <Sidebar>
       <div className="h-full">
         <UserList items={users} />
-        {childern}
+        {children}
       </div>
     </Sidebar>
   );
